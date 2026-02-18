@@ -406,14 +406,3 @@ footer {
     .img-grid, .img-grid-3 { grid-template-columns: 1fr; }
     .insight-grid { grid-template-columns: 1fr; }
 }
-
-/* ─── SCROLL REVEAL ─── */
-.reveal {
-    opacity: 0;
-    transform: translateY(18px);
-    transition: opacity 0.55s ease, transform 0.55s ease;
-}
-.reveal.visible {
-    opacity: 1;
-    transform: none;
-}
