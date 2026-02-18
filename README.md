@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -150,3 +151,106 @@
             color: var(--text-muted);
             font-size: 0.9rem;
         }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#discovery">Discovery</a>
+    <a href="#ideation">Ideation</a>
+    <a href="#iterations">Process</a>
+    <a href="#final">Final Design</a>
+</nav>
+
+<header>
+    <h1>Health Companion</h1>
+    <p>A human-centered approach to chronic condition management and caregiving.</p>
+</header>
+
+<div class="container">
+
+    <section id="discovery">
+        <span class="badge badge-success" style="background: #e0e7ff; color: #6366f1;">Phase 01</span>
+        <h2>Discovery & Research</h2>
+        <p class="section-intro">I interviewed six users ranging from ages 17 to 75. The goal was to bridge the gap between traditional tools—like physical pillboxes—and a modern digital experience.</p>
+        
+        <div class="grid">
+            <div class="artifact-card">
+                <h3>User Personas</h3>
+                <p>Developing personas for Gen Z, Millennials, and Boomers to find a convergent UI solution.</p>
+                <img src="persona.jpg" alt="Persona Analysis">
+            </div>
+            <div class="artifact-card">
+                <h3>Task Analysis</h3>
+                <p>Mapping the "Critical Loop": the journey from notification to medication confirmation.</p>
+                <img src="task-analysis.jpg" alt="Task Flow">
+            </div>
+        </div>
+    </section>
+
+    <section id="ideation">
+        <h2>Ideation & User Flows</h2>
+        <p class="section-intro">Using storyboards and sketches to visualize how the app fits into the daily chaos of a caregiver's life.</p>
+        
+        <div class="artifact-card" style="margin-bottom: 2rem;">
+            <h3>Storyboards & User Journeys</h3>
+            <img src="journey-map.jpg" alt="User Journey Map">
+        </div>
+
+        <div class="grid">
+            <div class="artifact-card">
+                <h3>Early Sketches</h3>
+                <p>Initial brainstorming focused on a card-based layout for better spatial clarity.</p>
+                <img src="sketches.jpg" alt="Hand-drawn sketches">
+            </div>
+        </div>
+    </section>
+
+    <section id="iterations">
+        <h2>The Iterative Process</h2>
+        <p class="section-intro">Even the failed designs led to the final solution. Here is how testing reshaped the product.</p>
+
+        <div class="grid">
+            <div class="artifact-card">
+                <span class="badge badge-fail">Version 01: Failed</span>
+                <h3>The "Trendy" UI</h3>
+                <p>The thin fonts and low contrast looked modern but were unusable for elderly participants.</p>
+                <img src="v1.jpg" alt="Failed Wireframe">
+            </div>
+            <div class="artifact-card">
+                <span class="badge badge-success">Version 02: Evolved</span>
+                <h3>The Accessible Pivot</h3>
+                <p>Introduction of large tap targets, photo-ID features, and bold iconography.</p>
+                <img src="v2.jpg" alt="Revised Wireframe">
+            </div>
+        </div>
+    </section>
+
+    <section id="final">
+        <h2>Final Mock-ups</h2>
+        <p class="section-intro">The final solution: A high-fidelity prototype that balances Gen Z aesthetics with Boomer-level accessibility.</p>
+        
+        <div class="final-mockup-container">
+            <img src="final-1.jpg" alt="Dashboard Mockup">
+            <img src="final-2.jpg" alt="Medication Profile Mockup">
+        </div>
+
+        <div class="grid" style="margin-top: 3rem;">
+            <div class="artifact-card">
+                <h3>Multi-Profile Support</h3>
+                <p>Seamlessly switch between managing your health and your dependent's needs.</p>
+            </div>
+            <div class="artifact-card">
+                <h3>Photo Identification</h3>
+                <p>Visual verification helps reduce errors for users taking multiple medications.</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Your Name | UX Design Case Study</p>
+</footer>
+
+</body>
