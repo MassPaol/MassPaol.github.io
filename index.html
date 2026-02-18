@@ -1,0 +1,513 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOEN 357 Mini-Project — HealthMe</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <p class="eyebrow">SOEN 357 — Mini-Project &nbsp;·&nbsp; Section V &nbsp;·&nbsp; February 2026</p>
+    <h1>Designing <em>HealthMe</em> &ndash;<br>A <em>Health Companion</em> App<br>Through User-Centred Research</h1>
+    <div class="meta">
+      <span><b>Author</b> — Massimo Paolini</span>
+      <span><b>ID</b> — 40280323</span>
+      <span><b>Course</b> — SOEN 357</span>
+    </div>
+  </header>
+
+  <main>
+
+    <nav class="toc reveal">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#research">User Research &amp; Persona Creation</a></li>
+        <li><a href="#journey">User Journey Mapping</a></li>
+        <li><a href="#storyboard">Storyboard</a></li>
+        <li><a href="#design">Sketching, Wireframing &amp; Prototype</a></li>
+        <li><a href="#usability">Usability Testing Plan</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+      </ol>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 1 — USER RESEARCH
+    ════════════════════════════════════════════════ -->
+    <section id="introduction" class="reveal">
+    <span class="section-num">01 / 07</span>
+      <h2 class="section-title">Introduction</h2>
+
+      <h3 class="subsection">The Problem</h3>
+      <p>
+        Currently, millions of Americans and Canadians live with at least one chronic condition. Living with a chronic condition is certainly not easy, it takes
+        constant care and attention to tend to it. Most people's strategy is somewhere in the ballpark of a notes app, a paper calendar and keeping a pillbox on
+        the kitchen counter. There needs to be a more systematic, reliable way for the millions of North Americans affected by chronic illnesses to take care of 
+        themselves.
+      </p>
+
+      <h3 class="subsection">Current Solutions</h3>
+      <p>
+        Most health management apps in the existing landscape have consistent shortcomings. They frustrate users by locking safety features behind paywalls or being 
+        far too complex for the average person. They also tend to overlook caregivers who are often juggling health data for both themselves and their families.
+      </p>
+
+      <h3 class="subsection">How HealthMe Can Help</h3>
+      <p>
+        The biggest hurdle when designing a health companion application is the large range of demographic that can be affected by a chronic condition, thus causing
+        your given userbase to be huge. When designing this application, multiple generations, from Gen Z to Boomers, were directly interviewed so as to get a broad 
+        view of all pain-points. The results were congregated and filtered to mazimize the reach of the application's UI/UX, in the hopes of helping everyone. It 
+        covers Gen Z users who are more tech-savy but want their health management to be unobstrusive; Millenials and Gen X users who often have to manage not only 
+        their own health but the health of a parent as well; and Boomer users who are less tech native and just want a clear, easy-to-use application. The goal is to
+        deliver all this, while still offering an inuitive and beautiful design.
+      </p>
+
+      <blockquote>
+        If you want to read the full case study report, it can be found <a href="report/Mini-Project_Report.pdf">here</a>.
+      </blockquote>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 2 — USER RESEARCH
+    ════════════════════════════════════════════════ -->
+    <section id="research" class="reveal">
+      <span class="section-num">02 / 07</span>
+      <h2 class="section-title">User Research &amp;<br>Persona Creation</h2>
+
+      <h3 class="subsection">Possible Methods</h3>
+      <p>Understanding user needs and behaviors requires the use of multiple research methods, each with its own strengths and constraints.</p>
+
+      <div class="insight-grid">
+        <div class="insight-item">
+          <strong>Surveys</strong>
+          <p>Common in-app feedback loops. Scalable but shallow — responses are often surface-level and lack the depth needed to uncover real pain points.</p>
+        </div>
+        <div class="insight-item">
+          <strong>Interviews</strong>
+          <p>One-on-one sessions with representative users. Rich, qualitative data — the gold standard for uncovering motivations, frustrations, and mental models.</p>
+        </div>
+        <div class="insight-item">
+          <strong>Secondary Research</strong>
+          <p>Analysis of existing forums, reviews, and competitor products. Efficient and broad — no participant recruitment needed, but insights may be indirect.</p>
+        </div>
+      </div>
+
+      <h3 class="subsection">Interviews</h3>
+      <p>10 real people, each managing some form of chronic condition, were interviewed. Their ages spanned from Gen Z to Boomer, intentionally chosen to surface how health-tech needs differ across life stages.</p>
+      <p>Questions were organised into four thematic groups:</p>
+
+      <div class="q-group">
+        <h5>Group 1 — Demographics &amp; Context</h5>
+        <ul>
+          <li>Can you describe a typical day when you have to manage your health or medications?</li>
+          <li>What are the three apps you use most on your phone? What do you like about them?</li>
+          <li>How comfortable do you feel using your phone for important tasks compared to pen and paper?</li>
+        </ul>
+      </div>
+
+      <div class="q-group">
+        <h5>Group 2 — Pain Points &amp; Challenges</h5>
+        <ul>
+          <li>Have you ever forgotten a dose or an appointment? What happened, and how did you feel?</li>
+          <li>When you need to talk to your doctor, what is the most annoying part of that process?</li>
+          <li>Where do you currently keep track of your health info? (e.g., physical folder, notes app, calendar)</li>
+        </ul>
+      </div>
+
+      <div class="q-group">
+        <h5>Group 3 — Needs &amp; Feature Validation</h5>
+        <ul>
+          <li>If an app sent you a notification to take medication, what information would you need to see immediately?</li>
+          <li>What information do you want to have ready right before you walk into a doctor's office?</li>
+          <li>If you were feeling unwell, how would you expect an app like this to help you in that moment?</li>
+        </ul>
+      </div>
+
+      <div class="q-group">
+        <h5>Group 4 — Generation-Specific</h5>
+        <ul>
+          <li>Gen Z: How would you want this to fit into your social/work life without being intrusive?</li>
+          <li>Millennials/Gen X: How can this app save you time rather than add a chore?</li>
+          <li>Gen X/Boomers: What makes a screen hard for you to read or interact with? How do you feel about sharing health data digitally?</li>
+        </ul>
+      </div>
+
+      <h4 class="subsubsection">Key Interview Responses</h4>
+
+      <p style="margin-bottom:0.5rem; font-size:0.85rem; color:var(--ink-muted);">Group 1 — Demographics &amp; Context</p>
+      <div class="interview-block">
+        <div class="interview-q">
+          <b>Participant, Age 23</b>
+          "A typical day is a series of 'remind me later' taps. I use Instagram and Notion the most because they are visual and flexible… I feel 100% comfortable with my phone for tasks…"
+        </div>
+        <div class="interview-q">
+          <b>Participant, Age 45</b>
+          "I check my own vitals… text my dad to see if he took his medications. I mainly use Outlook and Teams for work… I use my phone for 'important' things because of the sync. I need everything connected."
+        </div>
+        <div class="interview-q">
+          <b>Participant, Age 75</b>
+          "My health management is all physical reminders: the pillbox in the kitchen, the calendar on the desk… I use WhatsApp for family, but for health, I prefer my pen and paper…"
+        </div>
+      </div>
+
+      <p style="margin-bottom:0.5rem; font-size:0.85rem; color:var(--ink-muted);">Group 2 — Pain Points &amp; Challenges</p>
+      <div class="interview-block">
+        <div class="interview-q">
+          <b>Participant, Age 17</b>
+          "The most annoying part of seeing a doctor is having to communicate with them constantly by phone. Oftentimes I have to wait for a receptionist to call me back during class…"
+        </div>
+        <div class="interview-q">
+          <b>Participant, Age 45</b>
+          "The 'Mental Load' is the killer. I'm managing two sets of appointments. The most annoying part is the lack of transparency… I have to call the doctor just to find out if a prescription refill is ready."
+        </div>
+        <div class="interview-q">
+          <b>Participant, Age 73</b>
+          "I've forgotten appointments because I wrote them on a scrap of paper that got thrown away. It makes me feel unreliable… When I talk to the doctor, I feel rushed… I can't remember everything."
+        </div>
+      </div>
+
+      <p style="margin-bottom:0.5rem; font-size:0.85rem; color:var(--ink-muted);">Group 3 — Needs &amp; Feature Validation</p>
+      <div class="interview-block">
+        <div class="interview-q">
+          <b>Participant, Age 22</b>
+          "If I'm feeling unwell, I don't want to type a journal entry. I just want icons for 'Nausea' or 'Fatigue.' On my lock screen, I need the notification to be high-context."
+        </div>
+        <div class="interview-q">
+          <b>Participant, Age 45</b>
+          "A report that summarizes trends of my health would be perfect… I don't want a simple list; I want to show them a graph that says, 'Blood pressure spiked on Tuesdays.'"
+        </div>
+        <div class="interview-q">
+          <b>Participant, Age 75</b>
+          "I need to see a photo of the medication on the screen. Names like 'Lisinopril' mean nothing to me, but I know the 'round pink pill.' If I'm unwell, I expect the app to have a clear emergency contact button."
+        </div>
+      </div>
+
+      <p style="margin-bottom:0.5rem; font-size:0.85rem; color:var(--ink-muted);">Group 4 — Generation-Specific</p>
+      <div class="interview-block">
+        <div class="interview-q">
+          <b>Gen Z (17–23)</b>
+          "It needs to look like a 'lifestyle' app, not a 'sick person' app… If my phone is on the table during a meeting or date, the notification shouldn't broadcast something embarrassing…"
+        </div>
+        <div class="interview-q">
+          <b>Millennials / Gen X (45)</b>
+          "Save me time by automating the boring stuff. If the app can track my pharmacy refills and tell me before I run out, that's one less thing on my mental to-do list…"
+        </div>
+        <div class="interview-q">
+          <b>Boomers (70+)</b>
+          "Stop using thin, light-grey fonts on white backgrounds. I need high contrast and large tap targets… I'm fine sharing data with my doctor, but I don't want it 'shared' with advertisers."
+        </div>
+      </div>
+
+      <h3 class="subsection">Secondary Research</h3>
+      <p>Reddit served as the primary secondary source, drawing from subreddits like <code>r/ChronicIllness</code>, <code>r/adhdwomen</code>, and <code>r/UXDesign</code>. Five key themes emerged:</p>
+
+      <div class="insight-grid">
+        <div class="insight-item">
+          <strong>Subscription Fatigue</strong>
+          <p>Users resent premium paywalls on critical features like refill reminders. A free, core-feature-complete experience is table stakes.</p>
+        </div>
+        <div class="insight-item">
+          <strong>Mental Load of Scheduling</strong>
+          <p>Asynchronous scheduling is a critical unmet need — phone-only booking is a barrier, especially for those with ADHD or chronic fatigue.</p>
+        </div>
+        <div class="insight-item">
+          <strong>Notification Desensitization</strong>
+          <p>Standard reminders get ignored. Snooze functionality and smarter, context-aware notifications are needed.</p>
+        </div>
+        <div class="insight-item">
+          <strong>Privacy &amp; The Paper Backup</strong>
+          <p>A significant segment — especially seniors and privacy-conscious Gen Z — distrust cloud-syncing for medical data. Offline/printable options matter.</p>
+        </div>
+        <div class="insight-item">
+          <strong>The Caregiver Persona</strong>
+          <p>Many users manage not just their own health, but a relative's. Multi-profile support and shared access are essential features.</p>
+        </div>
+      </div>
+
+      <h3 class="subsection">User Personas</h3>
+      <p>Three primary personas were developed to translate collected research into actionable design decisions.</p>
+
+      <div class="persona-card reveal">
+        <div>
+          <span class="persona-tag">Gen Z</span>
+          <h4>Jennifer Smith</h4>
+          <p>Jennifer represents the Gen Z demographic — phone-native, visually driven, and deeply social. She relies entirely on her phone for management but hates making actual phone calls. Overwhelmed by notifications, she needs a health app that looks and feels like a lifestyle app — not a medical device. Discretion, speed, and aesthetic coherence are her top priorities.</p>
+        </div>
+        <figure>
+          <img src="images/full_persona_jennifer.png" alt="Jennifer Smith Persona Card" />
+          <figcaption>Fig. 1 — Jennifer Smith persona</figcaption>
+        </figure>
+      </div>
+
+      <div class="persona-card reveal">
+        <div>
+          <span class="persona-tag">Millennial / Gen X</span>
+          <h4>David Lee</h4>
+          <p>David is at the height of his career and family life, managing appointments and medications for both himself and aging parents. He wants tools that reduce mental load, not add to it. Automation, smart reminders about refills, and synced calendars are critical. He needs the app to work quietly in the background and surface the right information at the right time.</p>
+        </div>
+        <figure>
+          <img src="images/full_persona_david.png" alt="David Lee Persona Card" />
+          <figcaption>Fig. 2 — David Lee persona</figcaption>
+        </figure>
+      </div>
+
+      <div class="persona-card reveal">
+        <div>
+          <span class="persona-tag">Boomer</span>
+          <h4>Elena Pucci</h4>
+          <p>Elena represents the most medically dependent demographic. Less experienced with mobile UX, she needs an interface that is immediately intuitive with no assumed prior knowledge. High-contrast text, large tap targets, visual medication identification (photos of pills), and a prominent emergency contact button are non-negotiable. Printable summaries are also critical for her doctor visits.</p>
+        </div>
+        <figure>
+          <img src="images/full_persona_elena.png" alt="Elena Pucci Persona Card" />
+          <figcaption>Fig. 3 — Elena Pucci persona</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 3 — USER JOURNEY MAPPING
+    ════════════════════════════════════════════════ -->
+    <section id="journey" class="reveal">
+      <span class="section-num">03 / 07</span>
+      <h2 class="section-title">User Journey Mapping</h2>
+      <p>To connect user feedback into actionable UI/UX design decisions, each persona was mapped through a user journey — tracing their emotional state, actions, touchpoints, and pain points as they interact with the health management process end-to-end.</p>
+
+      <div class="img-grid">
+        <figure>
+          <img src="images/journeymap_jennifer.png" alt="Jennifer User Journey Map" />
+          <figcaption>Fig. 4 — Journey map (Jennifer)</figcaption>
+        </figure>
+        <figure>
+          <img src="images/journeymap_david.png" alt="David User Journey Map" />
+          <figcaption>Fig. 5 — Journey map (David)</figcaption>
+        </figure>
+        <figure>
+          <img src="images/journeymap_elena.png" alt="Elena User Journey Map" />
+          <figcaption>Fig. 6 — Journey map (Elena)</figcaption>
+        </figure>
+      </div>
+
+      <blockquote>
+        While building this project I realized that user journey maps are not just documentation, they force you to think through and feel what the user's 
+        actual journey would be.
+      </blockquote>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 4 — STORYBOARD
+    ════════════════════════════════════════════════ -->
+    <section id="storyboard" class="reveal">
+      <span class="section-num">04 / 07</span>
+      <h2 class="section-title">Storyboard</h2>
+      <p>
+        The storyboard illustrates a realistic scenario of how a target user would interact with the app in context — grounding the design in a real-world narrative rather than abstract UI states. 
+        The storyboard was based on Elena's persona as the older generations are more at risk for chronic illnesses, this would suggest that the bulk of our userbase would be more closely aligned with Elena rather than the other 2 personas.
+      </p>
+
+      <figure>
+        <img src="images/Storyboard_Screenshot.png" alt="Storyboard" />
+        <figcaption>Fig. 7 — Storyboard scenario</figcaption>
+      </figure>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 5 — SKETCHING, WIREFRAMING & PROTOTYPE
+    ════════════════════════════════════════════════ -->
+    <section id="design" class="reveal">
+      <span class="section-num">05 / 07</span>
+      <h2 class="section-title">Sketching, Wireframing<br>&amp; Prototype Design</h2>
+
+      <h3 class="subsection">Sketching</h3>
+      <p>Rough sketches were drawn first to rapidly explore layout ideas. Low fidelity by design — the goal here is breadth, not polish. They give immediate visual feedback and establish the structural logic of the app before any digital tool is opened.</p>
+
+      <div class="img-grid-3">
+        <figure>
+          <img src="images/sketch_1.jpeg" alt="Sketch 1" />
+          <figcaption>Fig. 8 — Sketch</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sketch_2.jpeg" alt="Sketch 2" />
+          <figcaption>Fig. 9 — Sketch</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sketch_3.jpeg" alt="Sketch 3" />
+          <figcaption>Fig. 10 — Sketch</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="subsection">Wireframes</h3>
+      <p>Building on the sketches, wireframes flesh out a more complete picture of the app's flow and interface structure. The focus here is UX and functionality — no colours, no branding — just information hierarchy, interaction patterns, and navigation logic.</p>
+
+      <figure>
+        <img src="images/wireframe1.png" alt="Wireframe overview" />
+        <figcaption>Fig. 11 — Wireframe overview</figcaption>
+      </figure>
+
+      <div class="img-grid">
+        <figure>
+          <img src="images/wireframe2.png" alt="Wireframe screen detail" />
+          <figcaption>Fig. 12 — Wireframe detail</figcaption>
+        </figure>
+        <figure>
+          <img src="images/wireframe3.png" alt="Wireframe screen detail 2" />
+          <figcaption>Fig. 13 — Wireframe detail</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="subsection">Prototype</h3>
+      <p>A clickable prototype was built with user needs at the centre. While not exhaustive, the 15-screen implementation covers the main app flow and demonstrates how the key UX decisions translate into an actual interface. Navigation is centralised through a persistent menu to improve navigability without duplicating screens.</p>
+
+      <blockquote>
+        The prototype is accessible via the link below — password: <code>Soen357_prototype</code>
+        <cite>→ <a href="#" style="color:var(--accent);">https://www.figma.com/proto/PJvrrFXozbUmV1JNzR9KpU/Prototypes?node-id=3-262&p=f&t=vSmbsWGagJKzVxd2-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A262</a></cite>
+      </blockquote>
+
+        <figure>
+          <img src="images/prototype1.png" alt="Prototype overview" />
+          <figcaption>Fig. 14 — Prototype screen</figcaption>
+        </figure>
+
+        <div class="img-grid">
+        <figure>
+          <img src="images/prototype2.png" alt="Prototype screen detail" />
+          <figcaption>Fig. 15 — Prototype screen</figcaption>
+        </figure>
+        <figure>
+          <img src="images/prototype3.png" alt="Prototype screen detail 2" />
+          <figcaption>Fig. 16 — Prototype screen</figcaption>
+        </figure>
+      </div>
+
+      <h4 class="subsubsection">Design Decisions</h4>
+      <ul class="feature-list">
+        <li><strong>AAA Colour Scheme</strong> — High-contrast colours throughout for maximum accessibility, especially for elderly users. All combinations meet WCAG AAA standards.</li>
+        <li><strong>Multi-Profile / Caregiver Mode</strong> — A menu option allows switching between user accounts so caregivers can manage a dependent's health from the same device.</li>
+        <li><strong>Streak Counter</strong> — Gamification element targeting Gen Z users to stay consistent with medication schedules and build loyalty to the app.</li>
+        <li><strong>Analytics Page</strong> — Trend graphs and logged metrics for Gen X/Boomer users, including dependent data — directly addressing the "I want to show them a graph" feedback.</li>
+        <li><strong>Card-Based Layout</strong> — Visually clean for Gen Z, functionally dense for Millennials/Gen X, and far more accessible than text-dense layouts for Boomers.</li>
+        <li><strong>Sign in with Apple</strong> — Reduces onboarding friction, particularly for Gen Z, by eliminating the need to create yet another password.</li>
+        <li><strong>18pt+ Font &amp; High Contrast Buttons</strong> — Baseline accessibility commitment targeting Boomer users, ensuring text is readable without assistive technology.</li>
+        <li><strong>In-house Messaging</strong> — Low-friction, asynchronous communication to cater to the younger generations, Millenials and Gen Z, who prefer this method over calling.</li>
+      </ul>
+
+      <h4 class="subsubsection">Colour System</h4>
+      <table class="color-table">
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Name</th>
+            <th>Hex</th>
+            <th>Usage</th>
+            <th>vs. White</th>
+            <th>vs. Cloud Gray</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>App Background</td>
+            <td>Pure White</td>
+            <td><span class="color-swatch" style="background:#FFFFFF;"></span>#FFFFFF</td>
+            <td>Main page canvas</td>
+            <td>N/A</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>Card Background</td>
+            <td>Cloud Gray</td>
+            <td><span class="color-swatch" style="background:#F0F2F5; border-color:#bbb;"></span>#F0F2F5</td>
+            <td>Containers / Sections</td>
+            <td>1.1:1</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>Primary Text</td>
+            <td>Near Black</td>
+            <td><span class="color-swatch" style="background:#1A1A1B;"></span>#1A1A1B</td>
+            <td>Headers &amp; Body</td>
+            <td>18.7:1 (AAA)</td>
+            <td>16.6:1 (AAA)</td>
+          </tr>
+          <tr>
+            <td>Action / Secondary</td>
+            <td>Deep Sea Blue</td>
+            <td><span class="color-swatch" style="background:#004B87;"></span>#004B87</td>
+            <td>Buttons &amp; Highlights</td>
+            <td>8.7:1 (AAA)</td>
+            <td>7.7:1 (AAA)</td>
+          </tr>
+          <tr>
+            <td>Success</td>
+            <td>Forest Green</td>
+            <td><span class="color-swatch" style="background:#006837;"></span>#006837</td>
+            <td>Plus-sign buttons</td>
+            <td>7.5:1 (AAA)</td>
+            <td>6.7:1 (AA)</td>
+          </tr>
+          <tr>
+            <td>Warning</td>
+            <td>Ruby Red</td>
+            <td><span class="color-swatch" style="background:#B30000;"></span>#B30000</td>
+            <td>Delete buttons</td>
+            <td>7.1:1 (AAA)</td>
+            <td>6.3:1 (AA)</td>
+          </tr>
+          <tr>
+            <td>Card Border</td>
+            <td>Medium Gray</td>
+            <td><span class="color-swatch" style="background:#595959;"></span>#595959</td>
+            <td>Card borders</td>
+            <td>7.1:1 (AAA)</td>
+            <td>6.3:1 (AA)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 6 — USABILITY TESTING
+    ════════════════════════════════════════════════ -->
+    <section id="usability" class="reveal">
+      <span class="section-num">06 / 07</span>
+      <h2 class="section-title">Usability Testing</h2>
+
+      <div class="placeholder">
+        <strong>[ PLACEHOLDER — Usability Testing ]</strong>
+        Add your usability testing methodology, tasks, participants, findings, and any iteration notes here.
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 7 — REFLECTION
+    ════════════════════════════════════════════════ -->
+    <section id="reflection" class="reveal">
+      <span class="section-num">07 / 07</span>
+      <h2 class="section-title">Reflection</h2>
+        
+      At the end of the day, this project allowed me to learn much more about the UI/UX design process. I gained much deeper insight into 
+      how UI/UX designers go about their jobs and what I could do to help them when working alongside them as a developer. Using such a 
+      structured process fundamentally changed my perspective as it forced me to go through thorough research before coming up with a plan.
+      The stark contrast between what I had envisioned initially and the actual interviews with the poeple around me reframed my entire approach.
+      I realized that this app isn't for me; it needs to be more than "easy to use", it had to guide people who are literally using notepads and 
+      calendars thorugh this shifting of behavior to my application. <br> <br>
+      
+      As expected, there were challenges along the way. The most obvious one was the source of the project in the first place, as mentioned in the 
+      introduction, trying to design across four generations. Everything I had worked with up until now was "trendy" and "flowy" designs, I had 
+      trouble thinking about other designs. Finally, I had decided to just take one of my trendy designs, a card-based layout, and make it boring.
+      I managed to design a UI that felt modern to Gen Z, organized to Millennials and Gen X, and spatially clear to Boomers. <br> <br>
+
+      Ultimately, this project taught me that theres a lot more to design than coming up with something you think looks nice. Its a whole process 
+      that mainly centers around listening to who you're designing for, ensuring that every decision is grounded in truth. This UX process helped 
+      me create an interface for an app that isn't just "nice to have," but truly useful.
+
+  </main>
+
+  <footer>
+    <span>SOEN 357 — Mini-Project · Massimo Paolini · 40280323</span>
+    <span>Section V · February 2026</span>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+  </body>
+</html>
