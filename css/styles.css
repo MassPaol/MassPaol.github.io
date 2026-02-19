@@ -332,6 +332,59 @@ figcaption {
     font-weight: 700;
 }
 
+/* ─── POINT LIST ─── */
+.point-list {
+    list-style: none;
+    margin: 1.2rem 0;
+    display: grid;
+    gap: 0.6rem;
+    padding-left: 0;
+}
+.point-list li {
+    padding: 0.7rem 1rem 0.7rem 2rem;
+    position: relative;
+    background: var(--paper-card);
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    border-left: 3px solid var(--accent);
+}
+.point-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0.6rem;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* ─── ORDERED LIST ─── */
+.ordered-list {
+    list-style: none;
+    margin: 1.2rem 0;
+    display: grid;
+    gap: 0.6rem;
+    padding-left: 0;
+    counter-reset: item;
+}
+.ordered-list li {
+    padding: 0.7rem 1rem 0.7rem 2.4rem;
+    position: relative;
+    background: var(--paper-card);
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    border-left: 3px solid var(--accent);
+    counter-increment: item;
+}
+.ordered-list li::before {
+    content: counter(item);
+    position: absolute;
+    left: 0.5rem;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.95rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
 /* ─── PLACEHOLDER ─── */
 .placeholder {
     background: repeating-linear-gradient(
